@@ -46,6 +46,6 @@ awValue
 1437
  ```
  
-This was made as an offshoot of a different project that needed simple programatically-available SMART raw values without dependencies so it's very simple. Improvements in data display could be made, such as providing names for SMART attributes and displaying other drive statistics. It could also gracefully handle drives that do not support the MSStorageDriver_ATAPISMartData WMI object but I don't have any to test on. Feel free to submit pull requests with improvements.
+This was made as an offshoot of a different project that needed simple programatically-available SMART raw values without dependencies so it's very simple. Data display could be better. Providing names for SMART attributes, parsing the "Flags" values into useful output, and displaying other drive statistics are all areas of potential improvement. It could also gracefully handle drives that do not support the MSStorageDriver_ATAPISMartData WMI object but I don't have any to test on. Feel free to submit pull requests with improvements.
 
 I tested this on a handfull of drives I had laying around, and compared data from several helpful members of the community at reddit.com/r/usefulscripts to see if there were any common outliers to account for. If you have a disk that does something unexpected, please open an issue with the results.
