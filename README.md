@@ -41,8 +41,7 @@ ID Flags Value Worst RawValue
  
  Get disk power cycle count:
 ```
-getsmartwin.ps1 C | Where-Object ID -eq 12 | Select-Object -ExpandProperty R
-awValue
+getsmartwin.ps1 C | Where-Object ID -eq 12 | Select-Object -ExpandProperty RawValue
 1437
  ```
  
