@@ -14,8 +14,6 @@ if (-not $fulldiskid) {
 
 $diskid = $fulldiskid.Matches.Groups[2].Value
 
-Write-Host $diskid
-
 [object]$rawsmartdata = (Get-WmiObject -Namespace 'Root\WMI' -Class 'MSStorageDriver_ATAPISMartData' |
         Where-Object 'InstanceName' -like "*$diskid*" |
         Select-Object -ExpandProperty 'VendorSpecific'
@@ -37,4 +35,4 @@ For ($i = 2; $i -lt $rawsmartdata.Length; $i++) {
     }
 }
 
-$output | Format-Table
+$output
