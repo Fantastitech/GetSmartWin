@@ -32,7 +32,7 @@ getsmartwin.ps1 C | Format-Table
 
 Get specific SMART attribute.
 ```
-getsmartwin.ps1 C | Where-Object { $_.ID -eq 5 } | Format-Table
+getsmartwin.ps1 C | Where ID -eq 5 | Format-Table
 
 ID Flags Value Worst RawValue
 -- ----- ----- ----- --------
@@ -41,7 +41,7 @@ ID Flags Value Worst RawValue
  
  Get disk power cycle count:
 ```
-getsmartwin.ps1 C | Where-Object { $_.ID -eq 12 } | Select-Object -ExpandProperty R
+getsmartwin.ps1 C | Where-Object ID -eq 12 | Select-Object -ExpandProperty R
 awValue
 1437
  ```
